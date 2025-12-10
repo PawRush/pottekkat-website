@@ -1,0 +1,398 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - button "Versions" [ref=e8]
+          - list
+        - listitem [ref=e9]:
+          - button "Languages" [ref=e10]
+          - list:
+            - listitem [ref=e11]:
+              - link "English" [ref=e12] [cursor=pointer]:
+                - /url: //localhost:1313/en/
+            - listitem [ref=e13]:
+              - link "Italian" [ref=e14] [cursor=pointer]:
+                - /url: //localhost:1313/it/
+            - listitem [ref=e15]:
+              - link "Polish" [ref=e16] [cursor=pointer]:
+                - /url: //localhost:1313/pl/
+            - listitem [ref=e17]:
+              - link "简体中文" [ref=e18] [cursor=pointer]:
+                - /url: //localhost:1313/zh-hans/
+            - listitem [ref=e19]:
+              - link "繁體中文" [ref=e20] [cursor=pointer]:
+                - /url: //localhost:1313/zh-hant/
+            - listitem [ref=e21]:
+              - link "Spanish" [ref=e22] [cursor=pointer]:
+                - /url: //localhost:1313/es/
+            - listitem [ref=e23]:
+              - link "Русский" [ref=e24] [cursor=pointer]:
+                - /url: //localhost:1313/ru/
+            - listitem [ref=e25]:
+              - link "日本語" [ref=e26] [cursor=pointer]:
+                - /url: //localhost:1313/ja/
+            - listitem [ref=e27]:
+              - link "Français" [ref=e28] [cursor=pointer]:
+                - /url: //localhost:1313/fr/
+            - listitem [ref=e29]:
+              - link "한국어" [ref=e30] [cursor=pointer]:
+                - /url: //localhost:1313/ko/
+            - listitem [ref=e31]:
+              - link "Português Brasileiro" [ref=e32] [cursor=pointer]:
+                - /url: //localhost:1313/pt-br/
+            - listitem [ref=e33]:
+              - link "Indonesia" [ref=e34] [cursor=pointer]:
+                - /url: //localhost:1313/id/
+            - listitem [ref=e35]:
+              - link "Հայերեն" [ref=e36] [cursor=pointer]:
+                - /url: //localhost:1313/hy/
+            - listitem [ref=e37]:
+              - link "Deutsch" [ref=e38] [cursor=pointer]:
+                - /url: //localhost:1313/de/
+            - listitem [ref=e39]:
+              - link "ไทย" [ref=e40] [cursor=pointer]:
+                - /url: //localhost:1313/th/
+            - listitem [ref=e41]:
+              - link "Ukrainian - Українська" [ref=e42] [cursor=pointer]:
+                - /url: //localhost:1313/uk/
+            - listitem [ref=e43]:
+              - link "Belarusian - Беларуская" [ref=e44] [cursor=pointer]:
+                - /url: //localhost:1313/be/
+            - listitem [ref=e45]:
+              - link "Türkçe" [ref=e46] [cursor=pointer]:
+                - /url: //localhost:1313/tr/
+            - listitem [ref=e47]:
+              - link "Nederlands" [ref=e48] [cursor=pointer]:
+                - /url: //localhost:1313/nl/
+            - listitem [ref=e49]:
+              - link "Tamil - தமிழ்" [ref=e50] [cursor=pointer]:
+                - /url: //localhost:1313/ta/
+            - listitem [ref=e51]:
+              - link "Malayalam - മലയാളം" [ref=e52] [cursor=pointer]:
+                - /url: //localhost:1313/ml/
+            - listitem [ref=e53]:
+              - link "Romanian" [ref=e54] [cursor=pointer]:
+                - /url: //localhost:1313/ro/
+            - listitem [ref=e55]:
+              - link "বাংলা (Bengali)" [ref=e56] [cursor=pointer]:
+                - /url: //localhost:1313/bn/
+            - listitem [ref=e57]:
+              - link "Uzbek (O'zbekcha)" [ref=e58] [cursor=pointer]:
+                - /url: //localhost:1313/uz/
+            - listitem [ref=e59]:
+              - link "العربية" [ref=e60] [cursor=pointer]:
+                - /url: //localhost:1313/ar/
+            - listitem [ref=e61]:
+              - link "فارسی" [ref=e62] [cursor=pointer]:
+                - /url: //localhost:1313/pr/
+        - listitem [ref=e63]:
+          - button "About" [ref=e64]:
+            - link "About" [ref=e65] [cursor=pointer]:
+              - /url: /en/about
+  - generic [ref=e67]:
+    - heading [level=1]
+    - paragraph
+    - figure [ref=e68]:
+      - img [ref=e69]
+  - main [ref=e70]:
+    - article [ref=e71]:
+      - heading "Conventional Commits 1.0.0-beta.4" [level=1] [ref=e72]
+      - heading "Anchor Summary" [level=2] [ref=e73]:
+        - link "Anchor" [ref=e74] [cursor=pointer]:
+          - /url: "#summary"
+          - text: 
+        - text: Summary
+      - paragraph [ref=e75]:
+        - text: The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with
+        - link "SemVer" [ref=e76] [cursor=pointer]:
+          - /url: http://semver.org
+        - text: ", by describing the features, fixes, and breaking changes made in commit messages."
+      - paragraph [ref=e77]: "The commit message should be structured as follows:"
+      - separator [ref=e78]
+      - code [ref=e80]: "<type>[optional scope]: <description> [optional body] [optional footer]"
+      - separator [ref=e81]
+      - list [ref=e82]:
+        - listitem [ref=e83]:
+          - strong [ref=e84]: "fix:"
+          - text: a commit of the
+          - emphasis [ref=e85]: type
+          - code [ref=e86]: fix
+          - text: patches a bug in your codebase (this correlates with
+          - link "PATCH" [ref=e87] [cursor=pointer]:
+            - /url: http://semver.org/#summary
+            - code [ref=e88]: PATCH
+          - text: in semantic versioning).
+        - listitem [ref=e89]:
+          - strong [ref=e90]: "feat:"
+          - text: a commit of the
+          - emphasis [ref=e91]: type
+          - code [ref=e92]: feat
+          - text: introduces a new feature to the codebase (this correlates with
+          - link "MINOR" [ref=e93] [cursor=pointer]:
+            - /url: http://semver.org/#summary
+            - code [ref=e94]: MINOR
+          - text: in semantic versioning).
+        - listitem [ref=e95]:
+          - strong [ref=e96]: "BREAKING CHANGE:"
+          - text: a commit that has the text
+          - code [ref=e97]: "BREAKING CHANGE:"
+          - text: at the beginning of its optional body or footer section introduces a breaking API change (correlating with
+          - link "MAJOR" [ref=e98] [cursor=pointer]:
+            - /url: http://semver.org/#summary
+            - code [ref=e99]: MAJOR
+          - text: in semantic versioning). A BREAKING CHANGE can be part of commits of any
+          - emphasis [ref=e100]: type
+          - text: .
+        - listitem [ref=e101]:
+          - text: "Others: commit"
+          - emphasis [ref=e102]: types
+          - text: other than
+          - code [ref=e103]: "fix:"
+          - text: and
+          - code [ref=e104]: "feat:"
+          - text: are allowed, for example
+          - link "@commitlint/config-conventional" [ref=e105] [cursor=pointer]:
+            - /url: https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional
+          - text: (based on the
+          - link "Angular convention" [ref=e106] [cursor=pointer]:
+            - /url: https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit
+          - text: ) recommends
+          - code [ref=e107]: "chore:"
+          - text: ","
+          - code [ref=e108]: "docs:"
+          - text: ","
+          - code [ref=e109]: "style:"
+          - text: ","
+          - code [ref=e110]: "refactor:"
+          - text: ","
+          - code [ref=e111]: "perf:"
+          - text: ","
+          - code [ref=e112]: "test:"
+          - text: ", and others."
+      - paragraph [ref=e113]:
+        - text: We also recommend
+        - code [ref=e114]: improvement
+        - text: for commits that improve a current implementation without adding a new feature or fixing a bug. Notice these types are not mandated by the conventional commits specification, and have no implicit effect in semantic versioning (unless they include a BREAKING CHANGE). A scope may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g.,
+        - code [ref=e115]: "feat(parser): add ability to parse arrays"
+        - text: .
+      - heading "Anchor Examples" [level=2] [ref=e116]:
+        - link "Anchor" [ref=e117] [cursor=pointer]:
+          - /url: "#examples"
+          - text: 
+        - text: Examples
+      - heading "Anchor Commit message with description and breaking change in body" [level=3] [ref=e118]:
+        - link "Anchor" [ref=e119] [cursor=pointer]:
+          - /url: "#commit-message-with-description-and-breaking-change-in-body"
+          - text: 
+        - text: Commit message with description and breaking change in body
+      - code [ref=e121]: "feat: allow provided config object to extend other configs BREAKING CHANGE: `extends` key in config file is now used for extending other config files"
+      - heading "Anchor Commit message with optional ! to draw attention to breaking change" [level=3] [ref=e122]:
+        - link "Anchor" [ref=e123] [cursor=pointer]:
+          - /url: "#commit-message-with-optional--to-draw-attention-to-breaking-change"
+          - text: 
+        - text: Commit message with optional
+        - code [ref=e124]: "!"
+        - text: to draw attention to breaking change
+      - code [ref=e126]: "chore!: drop Node 6 from testing matrix BREAKING CHANGE: dropping Node 6 which hits end of life in April"
+      - heading "Anchor Commit message with no body" [level=3] [ref=e127]:
+        - link "Anchor" [ref=e128] [cursor=pointer]:
+          - /url: "#commit-message-with-no-body"
+          - text: 
+        - text: Commit message with no body
+      - code [ref=e130]: "docs: correct spelling of CHANGELOG"
+      - heading "Anchor Commit message with scope" [level=3] [ref=e131]:
+        - link "Anchor" [ref=e132] [cursor=pointer]:
+          - /url: "#commit-message-with-scope"
+          - text: 
+        - text: Commit message with scope
+      - code [ref=e134]: "feat(lang): add polish language"
+      - heading "Anchor Commit message for a fix using an (optional) issue number." [level=3] [ref=e135]:
+        - link "Anchor" [ref=e136] [cursor=pointer]:
+          - /url: "#commit-message-for-a-fix-using-an-optional-issue-number"
+          - text: 
+        - text: Commit message for a fix using an (optional) issue number.
+      - code [ref=e138]: "fix: correct minor typos in code see the issue for details on the typos fixed closes issue #12"
+      - heading "Anchor Specification" [level=2] [ref=e139]:
+        - link "Anchor" [ref=e140] [cursor=pointer]:
+          - /url: "#specification"
+          - text: 
+        - text: Specification
+      - paragraph [ref=e141]:
+        - text: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in
+        - link "RFC 2119" [ref=e142] [cursor=pointer]:
+          - /url: https://www.ietf.org/rfc/rfc2119.txt
+        - text: .
+      - list [ref=e143]:
+        - listitem [ref=e144]:
+          - text: Commits MUST be prefixed with a type, which consists of a noun,
+          - code [ref=e145]: feat
+          - text: ","
+          - code [ref=e146]: fix
+          - text: ", etc., followed by an OPTIONAL scope, and a REQUIRED terminal colon and space."
+        - listitem [ref=e147]:
+          - text: The type
+          - code [ref=e148]: feat
+          - text: MUST be used when a commit adds a new feature to your application or library.
+        - listitem [ref=e149]:
+          - text: The type
+          - code [ref=e150]: fix
+          - text: MUST be used when a commit represents a bug fix for your application.
+        - listitem [ref=e151]:
+          - text: A scope MAY be provided after a type. A scope MUST consist of a noun describing a section of the codebase surrounded by parenthesis, e.g.,
+          - code [ref=e152]: "fix(parser):"
+        - listitem [ref=e153]:
+          - text: A description MUST immediately follow the space after the type/scope prefix. The description is a short summary of the code changes, e.g.,
+          - emphasis [ref=e154]: "fix: array parsing issue when multiple spaces were contained in string."
+        - listitem [ref=e155]: A longer commit body MAY be provided after the short description, providing additional contextual information about the code changes. The body MUST begin one blank line after the description.
+        - listitem [ref=e156]: A footer of one or more lines MAY be provided one blank line after the body. The footer MUST contain meta-information about the commit, e.g., related pull-requests, reviewers, breaking changes, with one piece of meta-information per-line.
+        - listitem [ref=e157]: Breaking changes MUST be indicated at the very beginning of the body section, or at the beginning of a line in the footer section. A breaking change MUST consist of the uppercase text BREAKING CHANGE, followed by a colon and a space.
+        - listitem [ref=e158]:
+          - text: A description MUST be provided after the
+          - code [ref=e159]: "BREAKING CHANGE:"
+          - text: ", describing what has changed about the API, e.g.,"
+          - emphasis [ref=e160]: "BREAKING CHANGE: environment variables now take precedence over config files."
+        - listitem [ref=e161]:
+          - text: Types other than
+          - code [ref=e162]: feat
+          - text: and
+          - code [ref=e163]: fix
+          - text: MAY be used in your commit messages.
+        - listitem [ref=e164]: The units of information that make up conventional commits MUST NOT be treated as case sensitive by implementors, with the exception of BREAKING CHANGE which MUST be uppercase.
+        - listitem [ref=e165]:
+          - text: A
+          - code [ref=e166]: "!"
+          - text: MAY be appended prior to the
+          - code [ref=e167]: ":"
+          - text: in the type/scope prefix, to further draw attention to breaking changes.
+          - code [ref=e168]: "BREAKING CHANGE: description"
+          - text: MUST also be included in the body or footer, along with the
+          - code [ref=e169]: "!"
+          - text: in the prefix.
+      - heading "Anchor Why Use Conventional Commits" [level=2] [ref=e170]:
+        - link "Anchor" [ref=e171] [cursor=pointer]:
+          - /url: "#why-use-conventional-commits"
+          - text: 
+        - text: Why Use Conventional Commits
+      - list [ref=e172]:
+        - listitem [ref=e173]: Automatically generating CHANGELOGs.
+        - listitem [ref=e174]: Automatically determining a semantic version bump (based on the types of commits landed).
+        - listitem [ref=e175]: Communicating the nature of changes to teammates, the public, and other stakeholders.
+        - listitem [ref=e176]: Triggering build and publish processes.
+        - listitem [ref=e177]: Making it easier for people to contribute to your projects, by allowing them to explore a more structured commit history.
+      - heading "Anchor FAQ" [level=2] [ref=e178]:
+        - link "Anchor" [ref=e179] [cursor=pointer]:
+          - /url: "#faq"
+          - text: 
+        - text: FAQ
+      - heading "Anchor How should I deal with commit messages in the initial development phase?" [level=3] [ref=e180]:
+        - link "Anchor" [ref=e181] [cursor=pointer]:
+          - /url: "#how-should-i-deal-with-commit-messages-in-the-initial-development-phase"
+          - text: 
+        - text: How should I deal with commit messages in the initial development phase?
+      - paragraph [ref=e182]:
+        - text: We recommend that you proceed as if you’ve already released the product. Typically
+        - emphasis [ref=e183]: somebody
+        - text: ", even if it’s your fellow software developers, is using your software. They’ll want to know what’s fixed, what breaks etc."
+      - heading "Anchor Are the types in the commit title uppercase or lowercase?" [level=3] [ref=e184]:
+        - link "Anchor" [ref=e185] [cursor=pointer]:
+          - /url: "#are-the-types-in-the-commit-title-uppercase-or-lowercase"
+          - text: 
+        - text: Are the types in the commit title uppercase or lowercase?
+      - paragraph [ref=e186]: Any casing may be used, but it’s best to be consistent.
+      - heading "Anchor What do I do if the commit conforms to more than one of the commit types?" [level=3] [ref=e187]:
+        - link "Anchor" [ref=e188] [cursor=pointer]:
+          - /url: "#what-do-i-do-if-the-commit-conforms-to-more-than-one-of-the-commit-types"
+          - text: 
+        - text: What do I do if the commit conforms to more than one of the commit types?
+      - paragraph [ref=e189]: Go back and make multiple commits whenever possible. Part of the benefit of Conventional Commits is its ability to drive us to make more organized commits and PRs.
+      - heading "Anchor Doesn’t this discourage rapid development and fast iteration?" [level=3] [ref=e190]:
+        - link "Anchor" [ref=e191] [cursor=pointer]:
+          - /url: "#doesnt-this-discourage-rapid-development-and-fast-iteration"
+          - text: 
+        - text: Doesn’t this discourage rapid development and fast iteration?
+      - paragraph [ref=e192]: It discourages moving fast in a disorganized way. It helps you be able to move fast long term across multiple projects with varied contributors.
+      - heading "Anchor Might Conventional Commits lead developers to limit the type of commits they make because they’ll be thinking in the types provided?" [level=3] [ref=e193]:
+        - link "Anchor" [ref=e194] [cursor=pointer]:
+          - /url: "#might-conventional-commits-lead-developers-to-limit-the-type-of-commits-they-make-because-theyll-be-thinking-in-the-types-provided"
+          - text: 
+        - text: Might Conventional Commits lead developers to limit the type of commits they make because they’ll be thinking in the types provided?
+      - paragraph [ref=e195]: Conventional Commits encourages us to make more of certain types of commits such as fixes. Other than that, the flexibility of Conventional Commits allows your team to come up with their own types and change those types over time.
+      - heading "Anchor How does this relate to SemVer?" [level=3] [ref=e196]:
+        - link "Anchor" [ref=e197] [cursor=pointer]:
+          - /url: "#how-does-this-relate-to-semver"
+          - text: 
+        - text: How does this relate to SemVer?
+      - paragraph [ref=e198]:
+        - code [ref=e199]: fix
+        - text: type commits should be translated to
+        - code [ref=e200]: PATCH
+        - text: releases.
+        - code [ref=e201]: feat
+        - text: type commits should be translated to
+        - code [ref=e202]: MINOR
+        - text: releases. Commits with
+        - code [ref=e203]: BREAKING CHANGE
+        - text: in the commits, regardless of type, should be translated to
+        - code [ref=e204]: MAJOR
+        - text: releases.
+      - heading "Anchor How should I version my extensions to the Conventional Commits Specification, e.g. @jameswomack/conventional-commit-spec?" [level=3] [ref=e205]:
+        - link "Anchor" [ref=e206] [cursor=pointer]:
+          - /url: "#how-should-i-version-my-extensions-to-the-conventional-commits-specification-eg-jameswomackconventional-commit-spec"
+          - text: 
+        - text: How should I version my extensions to the Conventional Commits Specification, e.g.
+        - code [ref=e207]: "@jameswomack/conventional-commit-spec"
+        - text: "?"
+      - paragraph [ref=e208]: We recommend using SemVer to release your own extensions to this specification (and encourage you to make these extensions!)
+      - heading "Anchor What do I do if I accidentally use the wrong commit type?" [level=3] [ref=e209]:
+        - link "Anchor" [ref=e210] [cursor=pointer]:
+          - /url: "#what-do-i-do-if-i-accidentally-use-the-wrong-commit-type"
+          - text: 
+        - text: What do I do if I accidentally use the wrong commit type?
+      - heading "Anchor When you used a type that’s of the spec but not the correct type, e.g. fix instead of feat" [level=4] [ref=e211]:
+        - link "Anchor" [ref=e212] [cursor=pointer]:
+          - /url: "#when-you-used-a-type-thats-of-the-spec-but-not-the-correct-type-eg-fix-instead-of-feat"
+          - text: 
+        - text: When you used a type that’s of the spec but not the correct type, e.g.
+        - code [ref=e213]: fix
+        - text: instead of
+        - code [ref=e214]: feat
+      - paragraph [ref=e215]:
+        - text: Prior to merging or releasing the mistake, we recommend using
+        - code [ref=e216]: git rebase -i
+        - text: to edit the commit history. After release, the cleanup will be different according to what tools and processes you use.
+      - heading "Anchor When you used a type not of the spec, e.g. feet instead of feat" [level=4] [ref=e217]:
+        - link "Anchor" [ref=e218] [cursor=pointer]:
+          - /url: "#when-you-used-a-type-not-of-the-spec-eg-feet-instead-of-feat"
+          - text: 
+        - text: When you used a type
+        - emphasis [ref=e219]: not
+        - text: of the spec, e.g.
+        - code [ref=e220]: feet
+        - text: instead of
+        - code [ref=e221]: feat
+      - paragraph [ref=e222]: In a worst case scenario, it’s not the end of the world if a commit lands that does not meet the conventional commit specification. It simply means that commit will be missed by tools that are based on the spec.
+      - heading "Anchor Do all my contributors need to use the conventional commit specification?" [level=3] [ref=e223]:
+        - link "Anchor" [ref=e224] [cursor=pointer]:
+          - /url: "#do-all-my-contributors-need-to-use-the-conventional-commit-specification"
+          - text: 
+        - text: Do all my contributors need to use the conventional commit specification?
+      - paragraph [ref=e225]: No! If you use a squash based workflow on Git lead maintainers can clean up the commit messages as they’re merged—adding no workload to casual committers. A common workflow for this is to have your git system automatically squash commits from a pull request and present a form for the lead maintainer to enter the proper git commit message for the merge.
+  - contentinfo [ref=e226]:
+    - generic [ref=e227]:
+      - generic [ref=e228]:
+        - paragraph [ref=e229]: License
+        - link "Creative Commons - CC BY 3.0" [ref=e230] [cursor=pointer]:
+          - /url: https://creativecommons.org/licenses/by/3.0/
+      - link [ref=e231] [cursor=pointer]:
+        - /url: https://www.netlify.com
+        - img [ref=e232]
+      - link [ref=e234] [cursor=pointer]:
+        - /url: https://github.com/conventional-commits/conventionalcommits.org
+        - img [ref=e235]
+```

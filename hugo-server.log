@@ -1,0 +1,22 @@
+Watching for changes in /Volumes/workplace/AWSDeployAgentScripts/repos/pottekkat-website/{archetypes,assets,content,data,i18n,layouts,package.json,static,themes}
+Watching for config changes in /Volumes/workplace/AWSDeployAgentScripts/repos/pottekkat-website/config.yml, /Volumes/workplace/AWSDeployAgentScripts/repos/pottekkat-website/themes/plausible-hugo/config.toml
+Start building sites … 
+hugo v0.152.2+extended+withdeploy darwin/arm64 BuildDate=2025-10-24T15:31:49Z VendorInfo=brew
+
+
+                  │ EN  
+──────────────────┼─────
+ Pages            │ 682 
+ Paginator pages  │  10 
+ Non-page files   │  23 
+ Static files     │ 661 
+ Processed images │ 952 
+ Aliases          │ 115 
+ Cleaned          │   0 
+
+Built in 3215 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop

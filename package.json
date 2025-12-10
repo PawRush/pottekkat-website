@@ -1,0 +1,19 @@
+{
+  "name": "pottekkat-website",
+  "version": "1.0.0",
+  "description": "Hugo blog with PaperMod theme - E2E tests",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "serve": "hugo server -D",
+    "build": "hugo --minify"
+  },
+  "keywords": ["hugo", "blog", "playwright"],
+  "author": "Navendu Pottekkat",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
