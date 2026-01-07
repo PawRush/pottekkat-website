@@ -28,7 +28,7 @@ export default defineConfig({
   // Shared test configuration
   use: {
     // Base URL for the Hugo site
-    baseURL: 'http://localhost:1313',
+    baseURL: process.env.BASE_URL ?? 'http://localhost:1313',
 
     // Collect trace on failure for debugging
     trace: 'on-first-retry',
@@ -46,34 +46,15 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
-    // Uncomment to test on additional browsers
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
-
-    // Mobile viewports
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
   ],
 
   // Development server configuration
-  // The Hugo server should be started separately
-  webServer: {
-    command: 'hugo server -D --port 1313',
-    url: 'http://localhost:1313',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000,
-  },
+  webServer: process.env.BASE_URL
+    ? undefined
+    : {
+        command: 'hugo server -D --port 1313',
+        url: 'http://localhost:1313',
+        reuseExistingServer: !process.env.CI,
+        timeout: 120 * 1000,
+      },
 });
