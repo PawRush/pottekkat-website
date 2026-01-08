@@ -266,8 +266,8 @@ test.describe('Navigation Across Sections', () => {
     for (const pagePath of pages) {
       await page.goto(pagePath);
 
-      // Click home link or logo
-      const homeLink = page.locator('a[href="/"], a[href="' + await page.evaluate(() => window.location.origin) + '"]').first();
+      // Click home link or logo - use relative path for better compatibility
+      const homeLink = page.locator('a[href="/"]').first();
       const logoLink = page.locator('header .logo a, #logo a').first();
 
       const homeCount = await homeLink.count();
@@ -284,7 +284,7 @@ test.describe('Navigation Across Sections', () => {
 
       await page.waitForLoadState('networkidle');
 
-      // Should be on homepage
+      // Should be on homepage - check for trailing slash or index
       expect(page.url()).toMatch(/\/$|\/index/);
     }
   });

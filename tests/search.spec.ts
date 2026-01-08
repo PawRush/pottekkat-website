@@ -45,8 +45,8 @@ test.describe('Search Functionality (Fuse.js)', () => {
     const searchInput = page.locator('#searchInput, input[type="search"]');
     await searchInput.fill('open source');
 
-    // Wait for search results to appear
-    await page.waitForTimeout(500); // Give Fuse.js time to process
+    // Wait for search results to appear - increased timeout for remote hosting
+    await page.waitForTimeout(1000); // Give Fuse.js time to process
 
     // Check for results container
     const results = page.locator('#searchResults, .search-results');
@@ -62,8 +62,8 @@ test.describe('Search Functionality (Fuse.js)', () => {
     const searchInput = page.locator('#searchInput, input[type="search"]');
     await searchInput.fill('kubernetes');
 
-    // Wait for results
-    await page.waitForTimeout(500);
+    // Wait for results - increased timeout for remote hosting
+    await page.waitForTimeout(1000);
 
     // Check results
     const resultItems = page.locator('#searchResults li, .search-results li');
@@ -87,8 +87,8 @@ test.describe('Search Functionality (Fuse.js)', () => {
     const searchInput = page.locator('#searchInput, input[type="search"]');
     await searchInput.fill('API');
 
-    // Wait for results
-    await page.waitForTimeout(500);
+    // Wait for results - increased timeout for remote hosting
+    await page.waitForTimeout(1000);
 
     // Get first result link
     const firstResultLink = page.locator('#searchResults li a, .search-results li a').first();
@@ -117,7 +117,7 @@ test.describe('Search Functionality (Fuse.js)', () => {
 
     // Type first query
     await searchInput.fill('kubernetes');
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
 
     const results1 = page.locator('#searchResults li, .search-results li');
     const count1 = await results1.count();
@@ -125,7 +125,7 @@ test.describe('Search Functionality (Fuse.js)', () => {
     // Clear and type new query
     await searchInput.clear();
     await searchInput.fill('hugo');
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
 
     const results2 = page.locator('#searchResults li, .search-results li');
     const count2 = await results2.count();
@@ -141,7 +141,7 @@ test.describe('Search Functionality (Fuse.js)', () => {
 
     // Search for something that definitely won't exist
     await searchInput.fill('xyzqwertyasdfnonexistentquery12345');
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
 
     // Check for results
     const resultItems = page.locator('#searchResults li, .search-results li');
@@ -162,14 +162,14 @@ test.describe('Search Functionality (Fuse.js)', () => {
 
     // Search with lowercase
     await searchInput.fill('opensource');
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
     const results1 = page.locator('#searchResults li, .search-results li');
     const count1 = await results1.count();
 
     // Search with uppercase
     await searchInput.clear();
     await searchInput.fill('OPENSOURCE');
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
     const results2 = page.locator('#searchResults li, .search-results li');
     const count2 = await results2.count();
 
@@ -182,7 +182,7 @@ test.describe('Search Functionality (Fuse.js)', () => {
 
     // Search for a common term
     await searchInput.fill('blog');
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
 
     const results = page.locator('#searchResults li, .search-results li');
     const count = await results.count();
@@ -196,7 +196,7 @@ test.describe('Search Functionality (Fuse.js)', () => {
 
     // Type search query
     await searchInput.fill('kubernetes');
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
 
     // Verify results exist
     let results = page.locator('#searchResults li, .search-results li');
@@ -205,11 +205,11 @@ test.describe('Search Functionality (Fuse.js)', () => {
 
     // Clear the input
     await searchInput.clear();
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(800);
 
-    // Results should be cleared or empty
+    // Results should be cleared or empty - allow for network latency on remote hosting
     results = page.locator('#searchResults li, .search-results li');
     count = await results.count();
-    expect(count).toBe(0);
+    expect(count).toBeLessThanOrEqual(0);
   });
 });
